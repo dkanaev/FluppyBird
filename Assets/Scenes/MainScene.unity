@@ -452,8 +452,8 @@ GameObject:
   - component: {fileID: 783839648}
   - component: {fileID: 783839650}
   - component: {fileID: 783839649}
-  - component: {fileID: 783839651}
   - component: {fileID: 783839652}
+  - component: {fileID: 783839653}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -554,20 +554,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &783839651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783839647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b41b33d2208c2b42b3c103be8365eed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 783839652}
-  junmpForce: 5
 --- !u!50 &783839652
 Rigidbody2D:
   serializedVersion: 4
@@ -589,6 +575,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &783839653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783839647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b18d715bcac59e4e8dc125c3cd26fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 783839652}
+  junmpForce: 5
 --- !u!1 &869317525
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +823,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.21851386, g: 0.4056604, b: 0.07909098, a: 1}
   m_FlipX: 0
@@ -844,7 +844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1044343586}
-  - component: {fileID: 1044343585}
+  - component: {fileID: 1044343587}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -852,19 +852,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1044343585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044343584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6ea4dc62d38194f86c8b0bc522a4a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loseWindow: {fileID: 346895822}
 --- !u!4 &1044343586
 Transform:
   m_ObjectHideFlags: 0
@@ -880,6 +867,19 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044343587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044343584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da6647eb9eb2a142a9d753442d2a600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseWindow: {fileID: 346895822}
 --- !u!1 &1066941788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1025,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1110612579
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1561420406
@@ -1148,7 +1148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.21851386, g: 0.4056604, b: 0.07909098, a: 1}
   m_FlipX: 0
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1044343585}
+      - m_Target: {fileID: 1044343587}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: RestartScene
         m_Mode: 1
@@ -1253,7 +1253,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: RestartScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1761069452
@@ -1335,10 +1335,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2141812164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599c1c2a45abc984e8a1510459ee7f30, type: 3}
+  m_Script: {fileID: 11500000, guid: 66eb4b07be3a9b5499fe6ddaa73a69ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToSpawn: 2
-  minYPosition: -2.9
-  maxYPosition: 2.6
-  pipePrefab: {fileID: 2457927473203458831, guid: 47723e93d2498e642bc67f59c6476b6b, type: 3}
+  minYPosition: -2.6
+  maxYPosition: 2.9
+  pipePrefab: {fileID: 2457927473203458831, guid: b368635f02e141e4294772470d9ab509, type: 3}

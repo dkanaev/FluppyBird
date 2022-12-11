@@ -17,10 +17,12 @@ public class GameManager : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
     public void Lose()
     {
         loseWindow.SetActive(true);
+        Time.timeScale = 0;
     }
 }
