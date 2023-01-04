@@ -13,7 +13,13 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
-    // Start is called before the first frame update
+
+    public void LoadScene(int sceneNumber)
+    {
+        SceneManager.LoadScene(sceneNumber);
+        Time.timeScale = 1;
+    }
+
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -24,5 +30,5 @@ public class GameManager : MonoBehaviour
     {
         loseWindow.SetActive(true);
         Time.timeScale = 0;
-    }
+    }    
 }
