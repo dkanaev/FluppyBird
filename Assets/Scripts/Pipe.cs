@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
-    public float speed;
+    // public float speed;
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
-    }
+    // // Update is called once per frame
+    // void Update()
+    // {
+    //     transform.Translate(Vector2.left * speed * Time.deltaTime);
+    // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
