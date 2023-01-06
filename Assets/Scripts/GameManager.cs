@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public GameObject loseWindow;
+    public LoseWindow loseWindow;
 
     private void Start()
     {
@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        loseWindow.SetActive(true);
+        loseWindow.gameObject.SetActive(true);
+        loseWindow.PlayerLose();
         Time.timeScale = 0;
     }    
 }

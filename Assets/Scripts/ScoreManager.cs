@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;    
 
-    private int score;
+    public int score {get;set;}
 
 
     public void Start()
@@ -20,6 +20,6 @@ public class ScoreManager : MonoBehaviour
     public void SetScore(int score)
     {
         this.score += score;
-        scoreText.text = "Score: " + this.score.ToString();
+        scoreText.text = this.score.ToString();
     }
 }
