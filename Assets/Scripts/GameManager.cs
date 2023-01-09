@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public AudioClip dieAudioClip;
 
     public LoseWindow loseWindow;
 
@@ -28,8 +29,9 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
+        GetComponent<AudioSource>().PlayOneShot(dieAudioClip);
         loseWindow.gameObject.SetActive(true);
         loseWindow.PlayerLose();
-        Time.timeScale = 0;
+        Time.timeScale = 0;        
     }    
 }

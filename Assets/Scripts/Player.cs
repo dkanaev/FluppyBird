@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float junmpForce;
     public BirdAnimation birdAnimation;
+    public AudioClip flyAudioClip;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
             rb.velocity =  new Vector2();
             rb.AddForce(transform.up * junmpForce, ForceMode2D.Impulse);
             birdAnimation.StartRotation();
+            GetComponent<AudioSource>().PlayOneShot(flyAudioClip);
         }
         birdAnimation.ApplyRotation(rb.velocity.y);
     }

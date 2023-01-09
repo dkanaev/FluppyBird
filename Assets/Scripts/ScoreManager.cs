@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;    
 
     public int score {get;set;}
+    public AudioClip scoreAudioClip;
 
 
     public void Start()
@@ -20,6 +21,7 @@ public class ScoreManager : MonoBehaviour
     public void SetScore(int score)
     {
         this.score += score;
+        GetComponent<AudioSource>().PlayOneShot(scoreAudioClip);
         scoreText.text = this.score.ToString();
     }
 }
